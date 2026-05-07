@@ -1,0 +1,217 @@
+@use "../abstracts/variables" as var;
+#airpods-feature-card {
+  #airpods-feature-card-container {
+    position: relative;
+    .scroll-list-button {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      opacity: 0.8;
+      border-radius: 100%;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list-next-button {
+      z-index: 10;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 4%;
+      svg {
+        padding-left: 4px;
+      }
+    }
+    .list-previous-button {
+      top: 50%;
+      transform: translateY(-50%);
+      left: 5%;
+      z-index: 10;
+      svg {
+        padding-right: 4px;
+      }
+    }
+    .carsourel-airpods-card[role="listitem"] {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10em;
+      $side-padding: 180px;
+      padding: 0 $side-padding;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      scroll-padding-left: $side-padding;
+
+      > .airpods-feature-card[role="item"] {
+        scroll-snap-align: start;
+        flex: 0 0 1121px;
+        width: 1121px; // Giữ nguyên theo yêu cầu
+        height: 756px;
+        // margin: 40px 0;
+        background-color: white;
+        border-radius: 28px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+        .product-img[fit-bg="true"] {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: none;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        // Khu vực hiển thị sản phẩm và tiêu đề lớn
+        .hero-container {
+          flex-grow: 1;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .bg-text {
+            font-family: "AppleCustom", sans-serif;
+
+            font-weight: 500;
+            color: #1d1d1f;
+
+            word-spacing: -0.05em;
+            letter-spacing: -0.03em;
+            margin: 0;
+            pointer-events: none;
+          }
+          .bg-text[position="on-image"] {
+            position: absolute;
+            z-index: 3; // Nằm trên
+            left: 5.5%;
+            bottom: -7%;
+            font-size: 5vw;
+          }
+          .bg-text[position="under-image"] {
+            position: relative;
+            z-index: 1; // Nằm dưới
+            font-size: 10vw;
+            // 1. Định nghĩa dải màu (Blue -> Purple -> Pink -> Orange)
+            background-image: linear-gradient(
+              to right,
+              #2172d2 10%,
+              // Xanh dương
+              #9e5cf7 35%,
+              // Tím
+              #d34a92 65%,
+              // Hồng/Magenta
+              #e14e2a 90% // Cam/Đỏ
+            );
+
+            // 2. Kỹ thuật đưa gradient vào chữ
+            -webkit-background-clip: text; // Cắt background theo hình chữ
+            background-clip: text;
+
+            // 3. Làm chữ trong suốt để lộ background phía dưới
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+            // Tăng thêm độ đậm để màu gradient nổi bật hơn
+            display: inline-block; // Đảm bảo gradient phủ đều theo độ dài chữ
+          }
+          .bg-text[text-w-fitbg="true"] {
+            color: white;
+          }
+
+          .product-img {
+            position: absolute;
+            z-index: 2; // Nằm trên chữ
+            top: 55%;
+            transform: translateY(-50%);
+            pointer-events: none;
+          }
+        }
+
+        // Khu vực thông tin và nút bấm ở chân trang
+        .footer-container {
+          padding: 40px 60px;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          z-index: 3;
+
+          .content-left {
+            .description {
+              font-family: "AppleCustom", sans-serif;
+              font-size: 21px;
+              line-height: 1.2;
+              font-weight: 500;
+              color: #1d1d1f;
+              margin: 0;
+              max-width: 320px;
+            }
+            .price {
+              font-family: "AppleCustom", sans-serif;
+              font-size: 17px;
+              color: #86868b;
+              margin-top: 10px;
+              display: block;
+            }
+            .description[text-w-fitbg="true"],
+            .price[text-w-fitbg="true"] {
+              color: whitesmoke;
+            }
+          }
+
+          .content-right {
+            display: flex;
+            gap: 12px;
+
+            .btn {
+              padding: 12px 22px;
+              border-radius: 980px;
+              font-size: 17px;
+              font-weight: 400;
+              cursor: pointer;
+              transition: all 0.3s ease;
+              border: 1px solid #0071e3;
+              text-decoration: none;
+
+              &.btn-blue {
+                background-color: #0071e3;
+                color: white;
+                &:hover {
+                  opacity: 90%;
+                }
+              }
+
+              &.btn-outline {
+                background-color: transparent;
+                color: #0071e3;
+                &:hover {
+                  background-color: #f5f5f7;
+                }
+              }
+            }
+            .btn[btn-w-fitbg="true"] {
+              border: 1px solid whitesmoke;
+              &.btn-blue[btn-w-fitbg="true"] {
+                background-color: whitesmoke;
+                color: black;
+              }
+              &.btn-outline[btn-w-fitbg="true"] {
+                color: white;
+                &:hover {
+                  color: black;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "abstracts/variables" ;
+
+
+@use "base/base";
+@use "base/typography";
+
+//Componentns
+@use 'components/navbar';
+@use 'components/cardshelf';
+@use 'components/hero_section';
+@use 'components/list_products';
+@use 'components/airpods_feature';
+
+//Layouts
+@use 'layouts/section';
+@use 'layouts/footer';

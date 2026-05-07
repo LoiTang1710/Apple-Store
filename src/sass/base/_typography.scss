@@ -1,0 +1,68 @@
+/* --- 1. CÁC BẢN ĐỨNG (NORMAL) --- */
+
+/* Regular - Dành cho văn bản thông thường */
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Medium - Dành cho các tiêu đề phụ, menu */
+@font-face {
+    font-family: 'AppleCustom'; 
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYMEDIUM.OTF') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* Bold - Dành cho tiêu đề lớn, giá tiền */
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYBOLD.OTF') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* --- 2. CÁC BẢN NGHIÊNG (ITALIC) --- */
+/* (Dựa trên danh sách file thực tế trong folder của bạn) */
+
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYULTRALIGHTITALIC.OTF') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYTHINITALIC.OTF') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYSEMIBOLDITALIC.OTF') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'AppleCustom';
+    src: url('/src/fonts/sf-pro-display/SFPRODISPLAYBLACKITALIC.OTF') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* --- 3. ÁP DỤNG CHUẨN UI APPLE --- */
+body {
+    font-family: 'AppleCustom', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    /* Apple style: Chữ sát lại một chút nhìn sẽ rất sang */
+    // letter-spacing: -0.022em; 
+    // line-height: 1.47059;
+    color: #1d1d1f; /* Màu đen đặc trưng của Apple */
+}

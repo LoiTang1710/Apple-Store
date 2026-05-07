@@ -1,0 +1,91 @@
+@use "../abstracts/variables" as var;
+@use "../base/typography" as typo;
+.list-products {
+  margin: 0 auto;
+  .list-products-container {
+    position: relative;
+    .scroll-list-button {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      opacity: 0.8;
+      border-radius: 100%;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .list-next-button {
+      top: 40%;
+      transform: translateY(-50%);
+      right: 10px;
+      svg {
+        padding-left: 4px;
+      }
+    }
+    .list-previous-button {
+      top: 40%;
+      transform: translateY(-50%);
+      left: 10px;
+      z-index: 10;
+      svg {
+        padding-right: 4px;
+      }
+    }
+    // background-color: white;
+    // border: 1px solid black;
+    > div[role="listitem"] {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 20px;
+      //   padding: 0 20px;
+      padding: 20px 0 40px;
+
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      > div:first-child,
+      > div:last-child {
+        background-color: transparent !important;
+        box-shadow: none !important;
+      }
+      > div[role="item"] {
+        // border: 1px solid black;
+        flex: 0 0 10em;
+        display: block;
+        // vuot nhe
+        scroll-snap-align: start;
+        // vuot manh
+        scroll-snap-stop: normal;
+        background-color: white;
+        box-shadow: 8px 8px 15px #00000014;
+        border-radius: 18px;
+
+        gap: 20px;
+        img {
+          margin: 50px 30px;
+        }
+        .text-overplay {
+          text-align: start;
+          padding: 0 40px;
+          margin-bottom: 20px;
+          margin-top: 20px;
+          > div {
+            padding: 5px 0;
+          }
+          .new-text {
+            font-size: 12px;
+            color: #f05c06;
+          }
+          > div:nth-child(2) {
+            font-size: 20px;
+            font-weight: 900;
+          }
+        }
+      }
+    }
+  }
+}

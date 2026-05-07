@@ -1,0 +1,99 @@
+.section-container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 70px 70px 0 70px;
+  box-sizing: border-box;
+}
+.section-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding-top: 30px;
+  .section-homepage {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    min-height: 500px;
+    margin: 20px 0 0 0;
+    background-color: white;
+    .section-content {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center; /* Quan trọng: Căn giữa h1, p và các khối con */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Đảm bảo các flex-item (như buttons) cũng được căn giữa[cite: 7] */
+      z-index: 2;
+      // transform: translateX(50%);
+      h1 {
+        font-size: 56px;
+        margin: 0;
+      }
+      p {
+        font-size: 28px;
+        margin: 6px 0 0 0;
+      }
+      .section-button {
+        margin-top: 17px;
+        display: grid;
+        grid-template-columns: max-content max-content;
+        column-gap: 17px;
+        justify-content: center;
+        text-align: center;
+        & .button {
+          font-size: 17px;
+          padding-block: 12px;
+          padding-inline: 22px;
+          border-radius: 36px;
+          border: none;
+        }
+        & .button-filled {
+          background-color: rgb(0, 113, 227);
+          color: white;
+        }
+        & .button-outlined {
+          background-color: transparent;
+          border: 1px solid rgb(0, 113, 227);
+          color: rgb(0, 113, 227);
+        }
+      }
+    }
+    .section-dark {
+      h1,
+      p {
+        color: #f5f5f7; /* Đổi màu chữ sang trắng/bạc để nổi bật trên nền đen[cite: 10] */
+      }
+    }
+    .section-img {
+      width: 100%;
+      height: 100%;
+      // margin-top: 15px;
+      // padding-top: 200px;
+      img {
+        display: block;
+        width: 100%; /* Đảm bảo ảnh chiếm hết chiều ngang[cite: 7] */
+        height: 100%; /* Đảm bảo ảnh chiếm hết chiều dọc của khung homepage[cite: 7] */
+
+        /* QUAN TRỌNG: Đổi contain thành cover để ảnh lấp đầy khung */
+        object-fit: cover;
+        object-position: center bottom; /* Đẩy trọng tâm ảnh xuống dưới để lộ phần điện thoại */
+
+        /* Tăng tỷ lệ khung hình hoặc bỏ hẳn nếu muốn dùng min-height của cha */
+        aspect-ratio: 21 / 9;
+      }
+      & .img-center-bottom {
+        height: auto;
+        object-fit: cover;
+        object-position: center 40%;
+        aspect-ratio: 21 / 9;
+        background-color: black;
+        margin-top: 20px;
+      }
+    }
+  }
+}

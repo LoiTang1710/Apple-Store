@@ -1,0 +1,138 @@
+@use "../abstracts/variables";
+.rs-cardshelf {
+  width: 100%;
+  padding-bottom: 20px;
+  .shelf-1 {
+    .shelf-1-section {
+      .rf-cards {
+        position: relative;
+        // width: 100%;
+
+        .scroll-button {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          opacity: 0.8;
+          border-radius: 100%;
+          cursor: pointer;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .next-button {
+          top: 40%;
+          transform: translateY(-50%);
+          right: 10px;
+          svg {
+            padding-left: 4px;
+          }
+        }
+        .previous-button {
+          top: 40%;
+          transform: translateY(-50%);
+          left: 10px;
+          z-index: 10;
+          svg {
+            padding-right: 4px;
+          }
+        }
+        > div[role="listitem"] {
+          display: flex;
+          align-items: center;
+          padding: 16px 0 40px;
+          justify-content: flex-start;
+          // cho phep scroll ngang neu element chiem qua dai
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+        //   -ms-overflow-style: none;
+          scrollbar-width: none;
+          scroll-padding-left: 128px;
+
+
+          > .cardshelf[role="item"] {
+            //flex shorthand: flex-grow | flex-shrink | flex-basis
+            flex: 0 0 10em;
+            display: block;
+            // vuot nhe
+            scroll-snap-align: start;
+            // vuot manh
+            scroll-snap-stop: normal;
+            // height: 10em;
+
+            a {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              font-size: 14px;
+              font-weight: semibold;
+              :hover {
+                text-decoration: underline;
+              }
+            }
+            #gallery-lastest {
+              display: block;
+              position: relative;
+              width: 400px;
+              height: 500px;
+              margin-left: 20px;
+              box-shadow: 2px 4px 12px #00000014;
+              border-radius: 18px;
+              :hover {
+                text-decoration: none;
+              }
+              .text-overplay {
+                position: absolute;
+                color: white;
+                left: 40px;
+                top: 40px;
+                h1[type="white"], h2[type="white"], p[type="white"]{
+                    color: white;
+                }
+                h1[type="black"], h2[type="black"], p[type="black"]{
+                    color: black;
+                }
+                h1[contains="not-new-text"]{
+                    padding: 24px 0 0;
+                }
+                h1 {
+                  font-size: 28px;
+                  margin: 0;
+                }
+                h2 {
+                  font-size: 17px;
+                  font-weight: 500;
+                  margin: 0;
+                  margin-top: 10px;
+                  padding-right: 20px;
+                }
+                p {
+                  font-size: 14px;
+                  margin: 0;
+                  margin-top: 10px;
+                }
+                .new-text{
+                    color: #b64400;
+                    font-size: 12px;
+                    padding: 0 0 8px;
+                    font-weight: 600;
+                }
+                .new-text[type="white"]{
+                    color: #f05c06;
+                }
+              }
+              img[width="400px"][height="500px"] {
+                border-radius: 18px;
+              }
+            }
+          }
+        }
+        .products-shelf {
+            background-color: white;
+        }
+      }
+    }
+  }
+}

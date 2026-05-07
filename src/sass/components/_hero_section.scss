@@ -1,0 +1,42 @@
+@use "../abstracts/variables";
+.section-title {
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 40px;
+  h1 {
+    color: variables.$text-foreground;
+    // flex-grow: 1, flex-shrink: 1, flex-basis: 1%
+    flex: 1;
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  h1 > span {
+    > span {
+      font-size: 70px;
+      background: linear-gradient(to right, #ff8b01, #ff3737);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .help-section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    .help-item {
+      display: flex;
+      flex-flow: column nowrap;
+      span:first-child {
+        font-weight: bold;
+      }
+      span:last-child {
+        color: variables.$text-second;
+      }
+    }
+  }
+  .list-article-title {
+    font-size: 24px;
+  }
+}

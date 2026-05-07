@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="./img/apple-logo-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <title>Apple Store</title>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/components/cardshelf.js" defer></script>
+    <script src="./js/components/listProducts.js" defer></script>
+    <script src="./js/components/carousel.js" defer></script>
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="./img/apple-logo-svgrepo-com.svg" alt="apple-logo" />
+        </a>
+        <div>
+          <ul>
+            <li><a href="store.html">Cửa hàng</a></li>
+            <li><a href="">Mac</a></li>
+            <li><a href="">iPad</a></li>
+            <li><a href="">iPhone</a></li>
+            <li><a href="">Watch</a></li>
+            <li><a href="">AirPods</a></li>
+            <li><a href="">TV & Nhà</a></li>
+            <li><a href="">Giải trí</a></li>
+            <li><a href="">Phụ kiện</a></li>
+            <li><a href="">Hỗ trợ</a></li>
+          </ul>
+        </div>
+        <div>
+          <img src="./img/search-svgrepo-com.svg" alt="" />
+          <img src="./img/bag-3-svgrepo-com.svg" alt="" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="section-container">
+        <div class="section-title">
+          <h1>
+            <span><span>Cửa hàng.</span> </span>
+          </h1>
+          <div class="help-section">
+            <div class="help-item">
+              <span>Cần giúp đỡ?</span>
+              <span>Kết nối với chuyên gia</span>
+            </div>
+            <div class="help-item">
+              <span>Tham quan cửa hàng Apple</span>
+              <span>Tìm kiếm gần bạn</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- LIST PRODUCTS -->
+      <div class="rs-cardshelf">
+        <div class="shelf-1">
+          <div class="shelf-1-section">
+            <div class="rf-cards">
+              <button
+                onclick="scrollCard(this, -400)"
+                class="scroll-button previous-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div id="scroll-list" role="listitem">
+                <div class="cardshelf" role="item"></div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img src="./img/list-products/macbook.svg" alt="" />
+                    <p>Mac</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="140px"
+                      src="./img/list-products/iphone17_PNG39.png"
+                      alt=""
+                    />
+                    <p>iPhone</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/ipad.svg"
+                      alt=""
+                    />
+                    <p>iPad</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/apple-watch.svg"
+                      alt=""
+                    />
+                    <p>Apple Watch</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/airpods.svg"
+                      alt=""
+                    />
+                    <p>AirPods</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/airtags.svg"
+                      alt=""
+                    />
+                    <p>AirTag</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/appletv.svg"
+                      alt=""
+                    />
+                    <p>Apple TV 4K</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/homepod.svg"
+                      alt=""
+                    />
+                    <p>HomePod mini</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a href="">
+                    <img
+                      width="120px"
+                      src="./img/list-products/accessories.svg"
+                      alt=""
+                    />
+                    <p>Phụ kiện</p>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">&nbsp;</div>
+              </div>
+              <button
+                onclick="scrollCard(this, 400)"
+                class="scroll-button next-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- LIST ARTICLE LASTEST -->
+      <div class="section-container section-title">
+        <h1 class="list-article-title">
+          <span><span class="list-article-title">Thế hệ mới nhất.</span></span>
+          Xem ngay có gì mới.
+        </h1>
+      </div>
+      <div class="rs-cardshelf">
+        <div class="shelf-1">
+          <div class="shelf-1-section">
+            <div class="rf-cards">
+              <button
+                onclick="scrollCard(this, -1340)"
+                class="scroll-button previous-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 19.5L8.25 12l7.5-7.5"
+                  />
+                </svg>
+              </button>
+              <div id="scroll-list" role="listitem">
+                <div class="cardshelf" role="item">&nbsp;</div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <h1 contains="not-new-text" type="white">
+                          iPhone 17 Pro
+                        </h1>
+                        <h2 type="white">Pro đỉnh cao</h2>
+                        <p type="white">Từ 34.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/iphone17-lastest.jpeg"
+                        alt="iPhone 17 Pro Max"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">Macbook Neo</h1>
+                        <h2 type="black">
+                          Điều tuyệt diệu của Mac ở mức giá bất ngờ
+                        </h2>
+                        <p type="black">Từ 16.499.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/macbook-neo.jpeg"
+                        alt="macbook Neo"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">iPhone 17e</h1>
+                        <h2 type="black">Đủ tính năng. Đầy giá trị</h2>
+                        <p type="black">Từ 17.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/iphone17e.jpeg"
+                        alt="Iphone 17e"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">AirPods Max 2</h1>
+                        <h2 type="black">
+                          Các tính năng thông minh mới. Trải nghiệm nghe sống
+                          động hơn
+                        </h2>
+                        <p type="black">Từ 14.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/airpods-new.jpeg"
+                        alt="AirPods new"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text" type="white">NEW</div>
+                        <h1 type="white">Macbook Pro</h1>
+                        <h2 type="white">Nay với M5, M5 Pro, M5 Max</h2>
+                        <p type="white">Từ 44.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/macbook-pro-new.jpeg"
+                        alt="Macbook Pro M5"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">Macbook Air</h1>
+                        <h2 type="black">Nay siêu mạnh mẽ với M5</h2>
+                        <p type="black">Từ 29.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img//gallery-lastest/macbook-air.jpeg"
+                        alt="Macbook Air M5"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">iPad Air</h1>
+                        <h2 type="black">Nay siêu mạnh mẽ với M4</h2>
+                        <p type="black">Từ 16.689.000đ.</p>
+                      </div>
+                    </div>
+                    <img
+                      width="400px"
+                      height="500px"
+                      src="./img/gallery-lastest/ipad-air-new.jpeg"
+                      alt="iPad air new"
+                    />
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">iPhone 17</h1>
+                        <h2 type="black">Đa tài. Đa sắc</h2>
+                        <p type="black">Từ 24.999.000đ.</p>
+                      </div>
+                    </div>
+                    <img
+                      width="400px"
+                      height="500px"
+                      src="./img/gallery-lastest/iphone17-new.jpeg"
+                      alt="iPhone 17"
+                    />
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">
+                  <a id="gallery-lastest" href="">
+                    <div class="gallery-card-content">
+                      <div class="text-overplay">
+                        <div class="new-text">NEW</div>
+                        <h1 type="black">iPhone Air</h1>
+                        <h2 type="black">iPhone mỏng nhất từng có</h2>
+                        <p type="black">Từ 31.999.000đ.</p>
+                      </div>
+                      <img
+                        width="400px"
+                        height="500px"
+                        src="./img/gallery-lastest/iphone-air-new.jpeg"
+                        alt="iPhone 17 air"
+                      />
+                    </div>
+                  </a>
+                </div>
+                <div class="cardshelf" role="item">&nbsp;</div>
+              </div>
+              <button
+                onclick="scrollCard(this, 1340)"
+                class="scroll-button next-button"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="3"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IPHONE LIST -->
+      <div class="section-container section-title">
+        <h1 style="font-size: 42px" class="list-article-title">iPhone</h1>
+      </div>
+      <div class="list-products">
+        <div class="list-products-container">
+          <button
+            onclick="scrollList(this, -1340)"
+            class="scroll-list-button list-previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div role="listitem">
+            <div role="item">&nbsp;</div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="./img/iPhone/iphone-17-blue-thumb-650x650.png"
+                alt="iPhone 17"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPhone 17</div>
+                <div>Từ 24.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="./img/iPhone/iphone-17-pro-max-cam-thumb-650x650.png"
+                alt="iPhone 17 Pro Max"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPhone 17 Pro Max</div>
+                <div>Từ 34.999.000đ .</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="./img/iPhone/iphone-16-plus-xanh-luu-ly-thumbnew-650x650.png"
+                alt="iPhone 16 Plus"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPhone 16 Plus</div>
+                <div>Từ 21.999.000đ</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="./img/iPhone/iphone-air-xanh-thumb_0-650x650 (1).png"
+                alt="iPhone Air"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPhone Air</div>
+                <div>Từ 31.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="./img/iPhone/iphone-17e-256gb-hong-thumb-650x650.png"
+                alt="iPhone 17e"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPhone 15 Pro</div>
+                <div>Từ 23.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">&nbsp;</div>
+          </div>
+          <button
+            onclick="scrollList(this, 1340)"
+            class="scroll-list-button list-next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- MACBOOK LIST -->
+      <div class="section-container section-title">
+        <h1 style="font-size: 42px" class="list-article-title">Macbook</h1>
+      </div>
+      <div class="list-products">
+        <div class="list-products-container">
+          <button
+            onclick="scrollList(this, -1340)"
+            class="scroll-list-button list-previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div role="listitem">
+            <div role="item">&nbsp;</div>
+            <div role="item">
+              <img
+                width="372px"
+                height="258px"
+                src="https://www.apple.com/assets-www/en_WW/mac/04_product_tile/large/mbn_0cd16ed14_2x.jpg"
+                alt="Macbook Neo"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>Macbook Neo</div>
+                <div>Từ 16.499.000đ</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="372px"
+                height="258px"
+                src="https://www.apple.com/assets-www/en_WW/mac/04_product_tile/large/mba_13_15_286f55670_2x.jpg"
+                alt="Macbook Air"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>MacBook Air 13” and 15”</div>
+                <div>Từ 29.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="372px"
+                height="258px"
+                src="https://www.apple.com/assets-www/en_WW/mac/04_product_tile/large/mbp_14_16_028335cc2_2x.jpg"
+                alt="Macbook Pro"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>MacBook Pro 14” and 16”</div>
+                <div>Từ 44.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="372px"
+                height="258px"
+                src="https://www.apple.com/assets-www/en_WW/mac/04_product_tile/large/studio_display_7963c35c4_2x.jpg"
+                alt="Studio Display"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>Studio Display</div>
+                <div>Từ 44.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="372px"
+                height="258px"
+                src="https://www.apple.com/assets-www/en_WW/mac/04_product_tile/large/imac_24_664024e20_2x.jpg"
+                alt="iMac"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iMac</div>
+                <div>Từ 34.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">&nbsp;</div>
+          </div>
+          <button
+            onclick="scrollList(this, 1340)"
+            class="scroll-list-button list-next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- IPAD LIST -->
+      <div class="section-container section-title">
+        <h1 style="font-size: 42px" class="list-article-title">iPad</h1>
+      </div>
+      <div class="list-products">
+        <div class="list-products-container">
+          <button
+            onclick="scrollList(this, -1340)"
+            class="scroll-list-button list-previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div role="listitem">
+            <div role="item">&nbsp;</div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://cdn.tgdd.vn/Products/Images/522/358099/s16/ipad-pro-m5-wifi-13-inch-black-thumbtz-650x650.png"
+                alt="iPad Pro"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPad Pro</div>
+                <div>Từ 29.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://cdn.tgdd.vn/Products/Images/522/363425/s16/ipad-air-m4-13-inch-wifi-256gb-xanh-thumb-650x650.png"
+                alt="iPad Air"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPad Air</div>
+                <div>Từ 16.689.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://cdn.tgdd.vn/Products/Images/522/335311/s16/ipad-11-5g-sliver-thumb-650x650.png"
+                alt="iPad"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPad</div>
+                <div>Từ 9.817.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://cdn.tgdd.vn/Products/Images/522/331229/s16/ipad-mini-7-wifi-purple-thumbtz-650x650.png"
+                alt="iPad mini"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>iPad mini</div>
+                <div>Từ 13.744.000đ.</div>
+              </div>
+            </div>
+            <div role="item">&nbsp;</div>
+          </div>
+          <button
+            onclick="scrollList(this, 1340)"
+            class="scroll-list-button list-next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- APPLE WATCH -->
+      <div class="section-container section-title">
+        <h1 style="font-size: 42px" class="list-article-title">Watch</h1>
+      </div>
+      <div class="list-products">
+        <div class="list-products-container">
+          <button
+            onclick="scrollList(this, -1340)"
+            class="scroll-list-button list-previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div role="listitem">
+            <div role="item">&nbsp;</div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://www.apple.com/assets-www/en_WW/watch/product_tile/large/s11_01ae61a6b_2x.png"
+                alt="Apple Watch Series 11"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>Apple Watch Series 11</div>
+                <div>Từ 11.499.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://www.apple.com/assets-www/en_WW/watch/product_tile/large/se_32690d524_2x.png"
+                alt="Apple Watch SE 3"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>Apple Watch SE 3</div>
+                <div>Từ 6.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">
+              <img
+                width="300px"
+                height="300px"
+                src="https://www.apple.com/assets-www/en_WW/watch/product_tile/large/u3_cd8a65060_2x.png"
+                alt="Apple Watch Ultra 3"
+              />
+              <div class="text-overplay">
+                <div class="new-text">NEW</div>
+                <div>Apple Watch Ultra 3</div>
+                <div>Từ 23.999.000đ.</div>
+              </div>
+            </div>
+            <div role="item">&nbsp;</div>
+          </div>
+          <button
+            onclick="scrollList(this, 1340)"
+            class="scroll-list-button list-next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- AIRPODS -->
+      <!-- <div class="section-container section-title">
+        <h1 style="font-size: 42px" class="list-article-title">AirPods</h1>
+      </div> -->
+      <div id="airpods-feature-card">
+        <div id="airpods-feature-card-container">
+          <!-- PREV BTN -->
+          <button
+            onclick="scrollList(this, -1340)"
+            class="scroll-list-button list-previous-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 19.5L8.25 12l7.5-7.5"
+              />
+            </svg>
+          </button>
+          <div class="carsourel-airpods-card" role="listitem">
+            <!-- AIRPODS MAX 2 -->
+            <div class="airpods-feature-card" role="item">
+              <div class="hero-container">
+                <h1 class="bg-text" position="under-image">AirPods Max 2</h1>
+                <img
+                  width="500px"
+                  src="https://www.apple.com/v/airpods/ae/images/overview/airpods_max_black__x3byrd2venmu_large.png"
+                  alt="AirPods Max 2"
+                  class="product-img"
+                />
+              </div>
+
+              <div class="footer-container">
+                <div class="content-left">
+                  <p class="description">
+                    Các tính năng nghe thông minh mới. Trải nghiệm nghe sống
+                    động hơn
+                  </p>
+                  <span class="price">14.999.000đ </span>
+                </div>
+
+                <div class="content-right">
+                  <a href="#" class="btn btn-blue">Tìm hiểu thêm</a>
+                  <a href="#" class="btn btn-outline">Mua</a>
+                </div>
+              </div>
+            </div>
+            <!-- AIRPODS PRO 3 -->
+            <div class="airpods-feature-card" role="item">
+              <img
+                width="1200px"
+                src="https://www.apple.com/v/airpods/ae/images/overview/hero_startframe__f6btrn4bhpyu_large_2x.jpg"
+                alt="AirPods Max 2"
+                class="product-img"
+                fit-bg="true"
+              />
+              <div class="hero-container">
+                <h1 class="bg-text" position="on-image">AirPods Pro 4</h1>
+              </div>
+
+              <div class="footer-container">
+                <div class="content-left">
+                  <p class="description">
+                    Chủ Động Khử Tiếng Ồn tai bạn chưa từng nghe.
+                  </p>
+                  <span class="price">6.799.000đ</span>
+                </div>
+
+                <div class="content-right">
+                  <a href="#" class="btn btn-blue">Tìm hiểu thêm</a>
+                  <a href="#" class="btn btn-outline">Mua</a>
+                </div>
+              </div>
+            </div>
+            <!-- AIRPODS 4 -->
+            <div class="airpods-feature-card" role="item">
+              <img
+                src="https://www.apple.com/v/airpods/ae/images/overview/hero__gb4d3fd8jnu6_large_2x.jpg"
+                alt="AirPods Max 2"
+                class="product-img"
+                fit-bg="true"
+              />
+              <div class="hero-container">
+                <h1 class="bg-text" position="on-image" text-w-fitbg="true">
+                  AirPods 4
+                </h1>
+              </div>
+
+              <div class="footer-container">
+                <div class="content-left">
+                  <p class="description" text-w-fitbg="true">
+                    Đẹp biểu tượng. Hay phi thường.
+                  </p>
+                  <span class="price" text-w-fitbg="true"
+                    >Từ 3.799.000đ <span>&nbsp;&nbsp;</span> Với Chủ Động Khử
+                    Tiếng Ồn 4.999.000đ
+                  </span>
+                </div>
+
+                <div class="content-right">
+                  <a href="#" class="btn btn-blue" btn-w-fitbg="true"
+                    >Learn more</a
+                  >
+                  <a href="#" class="btn btn-outline" btn-w-fitbg="true">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- NEXT BTN -->
+          <button
+            onclick="scrollList(this, 1340)"
+            class="scroll-list-button list-next-button"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="3"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.25 4.5l7.5 7.5-7.5 7.5"
+              />
+            </svg>
+          </button>
+          <div class="indicators">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div id="footer-container">
+        <div>
+          <div>
+            <img width="20px" src="./img/apple-logo-svgrepo-com.svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+        <div>
+          <div></div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
