@@ -59,6 +59,7 @@
             // vuot manh
             scroll-snap-stop: normal;
             // height: 10em;
+            transition: .4s ease-in-out;
 
             a {
               height: 100%;
@@ -127,6 +128,10 @@
                 border-radius: 18px;
               }
             }
+          }
+          .cardshelf[role="item"]:hover {
+            transform: scale(1.02);
+            
           }
         }
         .products-shelf {
