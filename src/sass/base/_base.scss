@@ -1,19 +1,25 @@
-@use '../abstracts/variables' as var;
+@use "../abstracts/variables" as var;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
-    margin: 0;
-    background-color: var.$body-primary;
-    
+  margin: 0;
+  background-color: var.$body-primary;
+  overflow-x: hidden; // "Bảo hiểm" cuối cùng để không bao giờ bị scroll ngang trang web
+  width: 100%;
 }
 a {
-    text-decoration: none;
-    color: var.$text-primary;
+  text-decoration: none;
+  color: var.$text-primary;
 }
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 section {
-    margin-left: 20px;
-    margin-right: 100px;
+  margin-left: 20px;
+  margin-right: 100px;
 }

@@ -1,7 +1,6 @@
-@use '../abstracts/variables';
+@use "../abstracts/variables";
 nav {
   background-color: variables.$background-nav;
-  // opacity: 90%;
   position: fixed;
   width: 100%;
   display: flex;
@@ -10,19 +9,22 @@ nav {
   gap: 24px;
   height: 44px;
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%); 
+  backdrop-filter: blur(20px) saturate(180%);
   z-index: 10;
-  ul {
-    display: flex;
-    gap: 28px;
-    li {
+  .nav-links {
+    // width: 100%;
+    ul {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px;
-      a {
-        color: black;
-        font-size: 11px;
+      gap: 28px;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px;
+        a {
+          color: black;
+          font-size: 11px;
+        }
       }
     }
   }
@@ -32,16 +34,80 @@ nav {
     width: 20px;
     // filter: invert(1);
   }
-  > div:last-child {
-    display: flex;
-    align-items:  center;
-    gap: 24px;
-    filter: invert(1);
-    >img:first-child {
+  .nav-actions {
+    .nav-utils {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      filter: invert(1);
+      > img:first-child {
         width: 15px;
-    }
-    > img:last-child {
+        order: 1;
+      }
+      > img:last-child {
         width: 20px;
+        order: 2;
+      }
+      a {
+        order: 3;
+        img {
+          filter: invert(1);
+        }
+      }
+    }
+  }
+  .nav-menu-list {
+    display: none;
+  }
+}
+.dropdown-nav-links {
+  display: none;
+}
+
+@media screen and (max-width: 900px) {
+  nav {
+    position: fixed;
+    justify-content: space-between;
+    // margin: 0 20px;
+
+    a.apple-logo {
+      margin-left: 20px;
+    }
+    .nav-links {
+      display: none;
+    }
+    .nav-actions {
+      margin-right: 20px;
+    }
+    .nav-menu-list {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .dropdown-responsive {
+    display: block;
+    position: fixed;
+    top: 44px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: variables.$background-nav;
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    ul {
+      padding: 0 0 20px 0;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        a {
+          color: black;
+          font-size: 11px;
+        }
+      }
     }
   }
 }

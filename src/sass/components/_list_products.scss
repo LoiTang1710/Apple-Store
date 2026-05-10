@@ -47,7 +47,12 @@
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       scrollbar-width: none;
-      > div:first-child,
+      scroll-padding-left: 140px;
+      padding-left: 140px;
+      @media (max-width: 1028px) {
+        scroll-padding-left: 35px;
+        padding-left: 35px;
+      }
       > div:last-child {
         background-color: transparent !important;
         box-shadow: none !important;
@@ -63,7 +68,6 @@
         background-color: white;
         box-shadow: 8px 8px 15px #00000014;
         border-radius: 18px;
-
         gap: 20px;
         img {
           margin: 50px 30px;
@@ -84,6 +88,22 @@
             font-size: 20px;
             font-weight: 900;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 900px) {
+  .list-products {
+    .list-products-container {
+      // 1. Ẩn nút mũi tên vì trên mobile dùng thao tác vuốt chạm
+      .scroll-list-button {
+        display: none !important;
+      }
+
+      > div[role="listitem"] {
+        > div[role="item"]:first-child {
+          display: none;
         }
       }
     }

@@ -15,37 +15,61 @@
     <script src="./js/components/cardshelf.js" defer></script>
     <script src="./js/components/listProducts.js" defer></script>
     <script src="./js/components/carousel.js" defer></script>
+    <script src="./js/components/openMenuList.js"></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html">
+        <a class="apple-logo" href="index.html">
           <img src="./img/apple-logo-svgrepo-com.svg" alt="apple-logo" />
         </a>
-        <div>
+        <div class="nav-links">
           <ul>
             <li><a href="store.html">Cửa hàng</a></li>
             <li><a href="">Mac</a></li>
             <li><a href="">iPad</a></li>
-            <li><a href="">iPhone</a></li>
+            <li><a href="iPhone.html">iPhone</a></li>
             <li><a href="">Watch</a></li>
             <li><a href="">AirPods</a></li>
-            <li><a href="">TV & Nhà</a></li>
-            <li><a href="">Giải trí</a></li>
-            <li><a href="">Phụ kiện</a></li>
-            <li><a href="">Hỗ trợ</a></li>
+            <li><a href="">TV & Home</a></li>
+            <li><a href="">Only on Apple</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Support</a></li>
           </ul>
         </div>
-        <div>
-          <img src="./img/search-svgrepo-com.svg" alt="" />
-          <img src="./img/bag-3-svgrepo-com.svg" alt="" />
+        <div class="nav-actions">
+          <div class="nav-utils">
+            <img src="./img/search-svgrepo-com.svg" alt="" />
+            <a
+              class="nav-menu-list"
+              id="nav-menu-list"
+              onclick="toggleMenuList()"
+            >
+              <img src="./img/align-justify.svg" alt="" />
+            </a>
+            <img src="./img/bag-3-svgrepo-com.svg" alt="" />
+          </div>
         </div>
       </nav>
+      <div class="dropdown-nav-links" id="dropdown-nav-links">
+        <ul>
+          <li><a href="store.html">Cửa hàng</a></li>
+          <li><a href="">Mac</a></li>
+          <li><a href="">iPad</a></li>
+          <li><a href="">iPhone</a></li>
+          <li><a href="">Watch</a></li>
+          <li><a href="">AirPods</a></li>
+          <li><a href="">TV & Home</a></li>
+          <li><a href="">Only on Apple</a></li>
+          <li><a href="">Accessories</a></li>
+          <li><a href="">Support</a></li>
+        </ul>
+      </div>
     </header>
     <main>
-      <section class="section-container">
-        <div class="section-title">
+      <section class="hero-container">
+        <div class="hero-title">
           <h1>
             <span><span>Cửa hàng.</span> </span>
           </h1>
@@ -86,7 +110,6 @@
                 </svg>
               </button>
               <div id="scroll-list" role="listitem">
-                <div class="cardshelf" role="item"></div>
                 <div class="cardshelf" role="item">
                   <a href="">
                     <img src="./img/list-products/macbook.svg" alt="" />
@@ -229,7 +252,6 @@
                 </svg>
               </button>
               <div id="scroll-list" role="listitem">
-                <div class="cardshelf" role="item">&nbsp;</div>
                 <div class="cardshelf" role="item">
                   <a id="gallery-lastest" href="">
                     <div class="gallery-card-content">
@@ -450,7 +472,6 @@
             </svg>
           </button>
           <div role="listitem">
-            <div role="item">&nbsp;</div>
             <div role="item">
               <img
                 width="300px"
@@ -565,7 +586,6 @@
             </svg>
           </button>
           <div role="listitem">
-            <div role="item">&nbsp;</div>
             <div role="item">
               <img
                 width="372px"
@@ -680,7 +700,6 @@
             </svg>
           </button>
           <div role="listitem">
-            <div role="item">&nbsp;</div>
             <div role="item">
               <img
                 width="300px"
@@ -782,7 +801,6 @@
             </svg>
           </button>
           <div role="listitem">
-            <div role="item">&nbsp;</div>
             <div role="item">
               <img
                 width="300px"
@@ -846,9 +864,9 @@
         </div>
       </div>
       <!-- AIRPODS -->
-      <!-- <div class="section-container section-title">
+      <div class="section-container section-title">
         <h1 style="font-size: 42px" class="list-article-title">AirPods</h1>
-      </div> -->
+      </div>
       <div id="airpods-feature-card">
         <div id="airpods-feature-card-container">
           <!-- PREV BTN -->
@@ -931,7 +949,7 @@
               <img
                 src="https://www.apple.com/v/airpods/ae/images/overview/hero__gb4d3fd8jnu6_large_2x.jpg"
                 alt="AirPods Max 2"
-                class="product-img"
+                class="product-img full-img"
                 fit-bg="true"
               />
               <div class="hero-container">
@@ -946,9 +964,8 @@
                     Đẹp biểu tượng. Hay phi thường.
                   </p>
                   <span class="price" text-w-fitbg="true"
-                    >Từ 3.799.000đ <span>&nbsp;&nbsp;</span> Với Chủ Động Khử Tiếng Ồn 4.999.000đ
-
-
+                    >Từ 3.799.000đ <span>&nbsp;&nbsp;</span> Với Chủ Động Khử
+                    Tiếng Ồn 4.999.000đ
                   </span>
                 </div>
 

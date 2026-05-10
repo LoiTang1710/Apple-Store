@@ -15,15 +15,16 @@
     <script src="./js/components/cardshelf.js" defer></script>
     <script src="./js/components/listProducts.js" defer></script>
     <script src="./js/components/carousel.js" defer></script>
+    <script src="./js/components/openMenuList.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header>
       <nav>
-        <a href="index.html">
+        <a class="apple-logo" href="index.html">
           <img src="./img/apple-logo-svgrepo-com.svg" alt="apple-logo" />
         </a>
-        <div>
+        <div class="nav-links">
           <ul>
             <li><a href="store.html">Cửa hàng</a></li>
             <li><a href="">Mac</a></li>
@@ -37,11 +38,30 @@
             <li><a href="">Support</a></li>
           </ul>
         </div>
-        <div>
-          <img src="./img/search-svgrepo-com.svg" alt="" />
-          <img src="./img/bag-3-svgrepo-com.svg" alt="" />
+        <div class="nav-actions">
+          <div class="nav-utils">
+            <img src="./img/search-svgrepo-com.svg" alt="" />
+            <a class="nav-menu-list" id="nav-menu-list" onclick="toggleMenuList()">
+              <img src="./img/align-justify.svg" alt="" />
+            </a>
+            <img src="./img/bag-3-svgrepo-com.svg" alt="" />
+          </div>
         </div>
       </nav>
+      <div class="dropdown-nav-links" id="dropdown-nav-links"> 
+          <ul>
+            <li><a href="store.html">Cửa hàng</a></li>
+            <li><a href="">Mac</a></li>
+            <li><a href="">iPad</a></li>
+            <li><a href="iPhone.html">iPhone</a></li>
+            <li><a href="">Watch</a></li>
+            <li><a href="">AirPods</a></li>
+            <li><a href="">TV & Home</a></li>
+            <li><a href="">Only on Apple</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Support</a></li>
+          </ul>
+        </div>
     </header>
     <main>
       <section class="section-wrapper">
@@ -204,7 +224,8 @@
             <div class="unit-text-overplay white">
               <h1 class="title-overplay">iPad Pro</h1>
               <p class="subhead">
-                Hiệu năng AI tiên tiến và&nbsp;<br />năng lực thay đổi cuộc chơi.
+                Hiệu năng AI tiên tiến và&nbsp;<br />năng lực thay đổi cuộc
+                chơi.
               </p>
               <div class="cta-links">
                 <a
@@ -238,9 +259,7 @@
             <a href="" class="unit-link">&nbsp;</a>
             <div class="unit-text-overplay white">
               <h1 class="title-overplay">Macbook Pro</h1>
-              <p class="subhead">
-                Nay với&nbsp;M5,M5 Pro và M5 Max.
-              </p>
+              <p class="subhead">Nay với&nbsp;M5,M5 Pro và M5 Max.</p>
               <div class="cta-links">
                 <a
                   class="button"
@@ -273,9 +292,7 @@
             <a href="" class="unit-link">&nbsp;</a>
             <div class="unit-text-overplay white">
               <h1 class="title-overplay">Apple Watch Ultra 3</h1>
-              <p class="subhead">
-                Tay chơi cự phách.
-              </p>
+              <p class="subhead">Tay chơi cự phách.</p>
               <div class="cta-links">
                 <a
                   class="button"

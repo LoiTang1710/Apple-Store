@@ -1,12 +1,33 @@
+@use "../abstracts/variables";
 .section-container {
   width: 100%;
   max-width: 1250px;
-  margin: 0 auto;
-  padding: 70px 70px 0 70px;
+  // margin: 0 auto;
+  padding: 70px 140px 0 140px;
   box-sizing: border-box;
 }
 .section-container.section-title {
-  padding: 0 70px 0 70px;
+  padding: 0 0 0 140px;
+  box-sizing: border-box;
+  h1 {
+    color: variables.$text-foreground;
+    // flex-grow: 1, flex-shrink: 1, flex-basis: 1%
+    flex: 1;
+    font-size: 48px;
+    line-height: 1.1;
+  }
+  h1 > span {
+    > span {
+      font-size: 48px;
+      background: linear-gradient(to right, #ff8b01, #ff3737);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  @media (max-width: 1028px) {
+    padding: 0 0 0 35px;
+  }
 }
 .section-wrapper {
   width: 100%;

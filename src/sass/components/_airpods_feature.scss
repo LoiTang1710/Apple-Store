@@ -38,18 +38,22 @@
       justify-content: flex-start;
       align-items: center;
       gap: 10em;
-      $side-padding: 180px;
+      $side-padding: 140px;
       padding: 0 $side-padding;
       overflow-x: auto;
       scroll-behavior: smooth;
       scroll-snap-type: x mandatory;
       scrollbar-width: none;
       scroll-padding-left: $side-padding;
+      @media (max-width: 1028px) {
+        scroll-padding-right: 240px;
+        padding-right: 240px;
+      }
+    
 
       > .airpods-feature-card[role="item"] {
         scroll-snap-align: start;
-        flex: 0 0 1121px;
-        width: 1121px; // Giữ nguyên theo yêu cầu
+        flex: 0 0 50%;
         height: 756px;
         // margin: 40px 0;
         background-color: white;
@@ -58,18 +62,26 @@
         overflow: hidden;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        @media (min-width: 1028px) {
+          flex: 0 0 100%;
+          transform: scale(1);
+        }
 
         .product-img[fit-bg="true"] {
           position: absolute;
           top: 0;
           left: 0;
+          right: 0;
+          bottom: 0; 
+          width: 100%; 
+          height: 100%; 
+          object-fit: cover; 
           transform: none;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+          z-index: 1; 
         }
-        // Khu vực hiển thị sản phẩm và tiêu đề lớn
         .hero-container {
           flex-grow: 1;
           position: relative;
@@ -98,7 +110,7 @@
           .bg-text[position="under-image"] {
             position: relative;
             z-index: 1; // Nằm dưới
-            font-size: 10vw;
+            font-size: 128px;
             // 1. Định nghĩa dải màu (Blue -> Purple -> Pink -> Orange)
             background-image: linear-gradient(
               to right,
@@ -137,6 +149,7 @@
 
         // Khu vực thông tin và nút bấm ở chân trang
         .footer-container {
+          width: 100%;
           padding: 40px 60px;
           display: flex;
           justify-content: space-between;
