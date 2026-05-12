@@ -1,4 +1,8 @@
 @use "../abstracts/variables";
+.section {
+  margin: 0;
+  padding: 112px 0 0 0;
+}
 .section-container {
   width: 100%;
   max-width: 1250px;
