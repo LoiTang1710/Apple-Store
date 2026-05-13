@@ -1,3 +1,4 @@
+import FAQs from "./FAQs.js";
 import products from "./products.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -29,4 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("main").innerHTML =
       "<h1>Sản phẩm không còn hàng</h1>";
   }
+  const FAQContainer = FAQs.map((FAQ) => {
+    return `<div class="AEO-card">
+      <h3>${FAQ.question}</h3>
+      <p>${FAQ.answer}</p>
+    </div>`;
+  }).join("");
+  console.log(FAQContainer)
+  document.getElementById("AEO-container").innerHTML += `${FAQContainer}`
 });
