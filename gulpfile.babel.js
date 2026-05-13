@@ -9,4 +9,5 @@ export const buildStyle = () => {
 export const watch = () => {
   return gulp.watch("src/sass/**/*.scss",buildStyle);
 }
+export const build = buildStyle
 export default gulp.series(buildStyle,watch)
