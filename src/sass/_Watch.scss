@@ -34,11 +34,11 @@
         justify-content: center;
         align-items: center;
 
-        > img {
+        > /img {
           width: 344px;
           height: 366px;
           border-radius: 28px;
-          @media (max-width:728px) {
+          @media (max-width: 728px) {
             width: 232px;
             height: 248px;
           }
@@ -61,7 +61,7 @@
           border: 1px solid #0076df;
           color: white;
           font-size: 14px;
-          transition: .4s ease-out;
+          transition: 0.4s ease-out;
           &:hover {
             background-color: transparent;
             color: #0076df;
@@ -87,7 +87,7 @@
           background-color: transparent;
           border: 1px solid #0076df;
           color: #0076df;
-          font-size: 14px; 
+          font-size: 14px;
           &:hover {
             background-color: #0076df;
             color: white;
@@ -125,12 +125,12 @@
         background-color: white;
         padding: 2em 0;
         border-radius: 16px;
-        transition: .3s ease-in-out;
+        transition: 0.3s ease-in-out;
         &:hover {
           box-shadow: 6px 6px 15px rgba($color: #4b4b4b, $alpha: 0.1);
           transform: scale(1.01);
         }
-        .watch-img {
+        .watch-/img {
           width: 235px;
           height: 235px;
           @media (max-width: 1028px) {
@@ -175,11 +175,11 @@
       padding: 0 160px;
       border: none;
       border-radius: 16px;
-      transition: .3s ease-in-out;
+      transition: 0.3s ease-in-out;
       p {
         font-weight: 600;
       }
-      img {
+      /img {
         margin-left: 15px;
       }
       &:hover {
