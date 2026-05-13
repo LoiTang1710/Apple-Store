@@ -1,4 +1,4 @@
-export default FAQs = [
+const FAQs = [
   {
     question: "iPhone có hỗ trợ sạc nhanh không?",
     answer:
@@ -32,3 +32,4 @@ export default FAQs = [
       "Các dòng iPhone từ iPhone 7 trở lên có chuẩn kháng nước IP67 hoặc IP68 (tùy model). Điều này có nghĩa là máy có thể chịu được nước bắn, mưa nhẹ hoặc ngâm nước tối đa 30 phút ở độ sâu 1-2 mét. Tuy nhiên, chúng tôi khuyến cáo không nên cố ý ngâm máy vì bảo hành không bao gồm hư hỏng do nước.",
   },
 ];
+export default FAQs;
