@@ -28,7 +28,7 @@ nav {
       }
     }
   }
-  a > /img:first-child {
+  a > ./img:first-child {
     display: flex;
     align-items: center;
     width: 20px;
@@ -40,17 +40,17 @@ nav {
       align-items: center;
       gap: 24px;
       filter: invert(1);
-      > /img:first-child {
+      > ./img:first-child {
         width: 15px;
         order: 1;
       }
-      > /img:last-child {
+      > ./img:last-child {
         width: 20px;
         order: 2;
       }
       a {
         order: 3;
-        /img {
+        ./img {
           filter: invert(1);
         }
       }

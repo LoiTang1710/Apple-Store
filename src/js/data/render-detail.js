@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (product) {
     document.getElementById("product-name").innerText = product.name;
     document.getElementById("current-price").innerText = product.price;
-    document.getElementById("main-/img").src = product.image;
+    document.getElementById("main-./img").src = product.image;
 
     const storageContainer = document.getElementById("storage-options");
 
