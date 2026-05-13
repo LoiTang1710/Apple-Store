@@ -149,7 +149,7 @@
           box-shadow: 6px 6px 15px rgba($color: #4b4b4b, $alpha: 0.1);
           transform: scale(1.01);
         }
-        .AirPods-./img {
+        .AirPods-img {
           width: 235px;
           height: 235px;
           @media (max-width: 1028px) {
@@ -198,7 +198,7 @@
       p {
         font-weight: 600;
       }
-      ./img {
+      img {
         margin-left: 15px;
       }
       &:hover {
