@@ -1,8 +1,150 @@
-footer {
-    margin: 20px;
-    padding: 40px;
-    #footer-container {
-        margin: 0 auto;
-        width: 100%;
+@use "../abstracts/variables" as var;
+
+.footer-main {
+  background-color: var.$body-primary; // #F5F5F7
+  color: var.$text-foreground;        // #6E6E73
+  font-size: 12px;
+  padding: 0 22px;
+  
+  .footer-content {
+    max-width: 980px; 
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  // 1. Menu Columns
+  .footer-directory {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-column {
+      flex-basis: 20%;
+      
+      &-section-title {
+        h3 {
+          font-size: 12px;
+          color: var.$text-primary;
+          margin-bottom: 0.8em;
+          font-weight: 600;
+        }
+      }
+
+      &-section-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          margin-bottom: 0.8em;
+          a {
+            text-decoration: none;
+            color: var.$text-foreground;
+            &:hover {
+              text-decoration: underline;
+              color: var.$text-primary;
+            }
+          }
+        }
+      }
+
+      &-state {
+        display: none;
+      }
     }
+  }
+
+  .footer-shop {
+    border-bottom: 1px solid #d2d2d7;
+    padding: 17px 0 11px;
+    margin-bottom: 15px;
+
+    &-text {
+      a {
+        color: var.$text-second; // #0088FF
+        text-decoration: none;
+        &:hover { text-decoration: underline; }
+      }
+    }
+  }
+
+  // 3. Legal
+  .footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    &-copyright {
+      margin-right: 30px;
+    }
+
+    &-links {
+      display: flex;
+      gap: 15px;
+      a {
+        text-decoration: none;
+        color: var.$text-foreground;
+        border-right: 1px solid #d2d2d7;
+        padding-right: 15px;
+        &:last-child { border: none; }
+        &:hover { color: var.$text-primary; }
+      }
+    }
+
+    &-locale {
+      margin-left: auto; 
+      color: var.$text-primary;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-main {
+    .footer-directory {
+      flex-direction: column;
+
+      &-column {
+        width: 100%;
+        border-bottom: 1px solid #d2d2d7;
+
+        &-section-title {
+          cursor: pointer;
+          display: block;
+          padding: 10px 0;
+          position: relative;
+          
+          &::after {
+            content: "+";
+            position: absolute;
+            right: 0;
+            transition: transform 0.3s ease;
+          }
+        }
+
+        &-section-list {
+          height: 0;
+          overflow: hidden;
+          transition: height 0.3s ease;
+        }
+
+        &-state:checked ~ .footer-directory-column-section-list {
+          height: auto;
+          padding-bottom: 10px;
+        }
+
+        &-state:checked ~ .footer-directory-column-section-title::after {
+          transform: rotate(45deg);
+        }
+      }
+    }
+
+    .footer-legal {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+
+      &-locale { margin-left: 0; padding-top: 10px; }
+    }
+  }
 }
