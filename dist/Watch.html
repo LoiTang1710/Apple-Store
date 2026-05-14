@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="../dist/css/index.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="shortcut icon"
+      href="img/apple-logo-svgrepo-com.svg"
+      type="image/x-icon"
+    />
+    <title>Apple Store</title>
+
+    <!-- JAVASCRIPT -->
+    <script src="js/components/cardshelf.js" defer></script>
+    <script src="js/components/listProducts.js" defer></script>
+    <script src="js/components/carousel.js" defer></script>
+    <script src="js/components/openMenuList.js"></script>
+    <script src="js/components/Button.js" defer></script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="apple-logo" href="index.html">
+          <img src="img/apple-logo-svgrepo-com.svg" alt="apple-logo" />
+        </a>
+        <div class="nav-links">
+          <ul>
+            <li><a href="store.html">Cửa hàng</a></li>
+            <li><a href="Macbook.html">Mac</a></li>
+            <li><a href="iPad.html">watch</a></li>
+            <li><a href="iPhone.html">iPhone</a></li>
+            <li><a href="Watch.html">Watch</a></li>
+            <li><a href="AirPods.html">AirPods</a></li>
+            <li><a href="Accessories.html">Accessories</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <div class="nav-utils">
+            <img src="img/search-svgrepo-com.svg" alt="" />
+            <a
+              class="nav-menu-list"
+              id="nav-menu-list"
+              onclick="toggleMenuList()"
+            >
+              <img src="img/align-justify.svg" alt="" />
+            </a>
+            <img src="img/bag-3-svgrepo-com.svg" alt="" />
+          </div>
+        </div>
+      </nav>
+      <div class="dropdown-nav-links" id="dropdown-nav-links">
+        <ul>
+          <li><a href="store.html">Cửa hàng</a></li>
+          <li><a href="Macbook.html">Mac</a></li>
+          <li><a href="iPad.html">iPad</a></li>
+          <li><a href="iPhone.html">iPhone</a></li>
+          <li><a href="Watch.html">Watch</a></li>
+          <li><a href="AirPods.html">AirPods</a></li>
+          <li><a href="Accessories.html">Accessories</a></li>
+        </ul>
+      </div>
+    </header>
+    <main id="Watch-main">
+      <div class="hero-container">
+        <h1 class="page-header-title viewport-content">Apple Watch Trend</h1>
+        <div class="product-list viewport-content">
+          <a class="product-link" href="product-detail.html?id=watch-s11">
+            <img
+              src="https://www.apple.com/assets-www/en_WW/watch/product_tile/large/s11_01ae61a6b_2x.png"
+              class="watch"
+              alt="watch Neo"
+            />
+            <p class="product-header">Apple Watch Series 11</p>
+            <p>
+              Từ 11.499.000đ hoặc <br />
+              468.000đ/th. trong 24 tháng
+            </p>
+            <button class="btn-buy">Mua</button>
+          </a>
+          <a class="product-link" href="product-detail.html?id=watch-se-3">
+            <img
+              src="https://www.apple.com/assets-www/en_WW/watch/product_tile/large/se_32690d524_2x.png"
+              alt="Air"
+              class="watch"
+            />
+            <p class="product-header">Apple Watch SE 3</p>
+            <p>
+              Từ 6.999.000đ hoặc <br />
+              285.000đ/th. trong 24 tháng
+            </p>
+            <button class="btn-buy">Mua</button>
+          </a>
+          <a class="product-link" href="product-detail.html?id=watch-ultra-3">
+            <img
+              src="https://www.apple.com/assets-www/vi_VN/watch/product_tile/large/u3_c4733b52c_2x.png"
+              alt="imac"
+              class="watch"
+            />
+            <p class="product-header">Apple Watch Ultra 3</p>
+            <p>
+              Từ 23.999.000đ hoặc <br />
+              977.000đ/th. trong 24 tháng
+            </p>
+            <button class="btn-buy">Mua</button>
+          </a>
+        </div>
+      </div>
+      <section class="section-lineup section">
+        <div class="header-section row">
+          <h1 class="section-header viewport-content">Explore the line up</h1>
+        </div>
+        <div class="header-section row">
+          <div class="viewport-content viewport-series-button">
+            <button class="btn-series toggle-button">Apple Watch Series</button>
+            <button class="btn-series toggle-button">Apple Watch Ultra</button>
+            <button class="btn-series toggle-button">Apple Watch SE</button>
+          </div>
+        </div>
+      </section>
+      <div class="shop-wrapper">
+        <div class="shop-container">
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-se-3">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/344767/s16/apple-watch-se-3-40mm-vien-nhom-day-the-thao-starlight-thumb-650x650.png"
+                alt="watch"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch SE 3</p>
+                <p>6.790.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list">
+              <button class="active">40nm</button>
+              <button>44nm</button>
+            </div>
+          </div>
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-s11">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/344750/s16/apple-watch-series-11-42mm-vien-nhom-day-the-thao-vang-hong-thumb-650x650.png"
+                alt="watch"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch Series 11</p>
+                <p>11.190.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list">
+              <button class="active">42nm</button>
+              <button>46nm</button>
+            </div>
+          </div>
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-se-3-gps">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/344769/s16/apple-watch-se-3-gps-cellular-40mm-vien-nhom-day-the-thao-starlight-thumb-650x650.png"
+                alt="watch"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch SE 3 GPS</p>
+                <p>8.390.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list">
+              <button class="active">40nm</button>
+              <button>44nm</button>
+            </div>
+          </div>
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-ultra-3">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/344766/s16/apple-watch-ultra-3-gps-cellular-49mm-vien-titanium-day-alpine-titan-thumb-650x650.png"
+                alt="watch"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch Ultra 3 GPS</p>
+                <p>23.290.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list"></div>
+          </div>
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-ultra-2">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/329719/s16/apple-watch-ultra-2-gps-cellular-49mm-vien-titanium-day-alpine-xanh-den-650x650.png"
+                alt="16 plus"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch Ultra 2 GPS</p>
+                <p>17.690.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list"></div>
+          </div>
+          <div class="item-card">
+            <a href="product-detail.html?id=watch-series-10">
+              <img
+                class="watch-img"
+                src="https://cdn.tgdd.vn/Products/Images/7077/329708/s16/apple-watch-series-10-lte-42mm-day-vai-xanh-nhat-tb-650x650.png"
+                alt="watch"
+              />
+              <div class="text-overplay">
+                <p>Apple Watch Series 10 GPS</p>
+                <p>9.990.000đ</p>
+              </div>
+            </a>
+            <div class="config-button-list">
+              <button class="active">42nm</button>
+              <button>46nm</button>
+            </div>
+          </div>
+        </div>
+        <button class="load-more-product">
+          <p>Xem thêm sản phẩm</p>
+          <img src="img/chevron-down.svg" alt="chevron-down" />
+        </button>
+      </div>
+    </main>
+    <footer class="footer-main">
+      <div class="footer-content">
+        <div
+          class="footer-directory"
+          aria-label="Apple Directory"
+          role="navigation"
+        >
+          <div class="footer-directory-column">
+            <label
+              class="footer-directory-column-section-title"
+              for="footer-directory-column-section-1"
+            >
+              <h3>Chọn và Học Hỏi</h3>
+            </label>
+            <ul class="footer-directory-column-section-list">
+              <li><a href="store.html">Cửa Hàng</a></li>
+              <li><a href="Macbook.html">Mac</a></li>
+              <li><a href="iPad.html">iPad</a></li>
+              <li><a href="iPhone.html">iPhone</a></li>
+              <li><a href="Watch.html">Watch</a></li>
+              <li><a href="AirPods.html">AirPods</a></li>
+              <li><a href="Accessories.html">Phụ Kiện</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-directory-column">
+            <label
+              class="footer-directory-column-section-title"
+              for="footer-directory-column-section-2"
+            >
+              <h3>Dịch Vụ</h3>
+            </label>
+            <ul class="footer-directory-column-section-list">
+              <li><a href="#">Apple Music</a></li>
+              <li><a href="#">Apple TV+</a></li>
+              <li><a href="#">iCloud</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-directory-column">
+            <label
+              class="footer-directory-column-section-title"
+              for="footer-directory-column-section-3"
+            >
+              <h3>Tài Khoản</h3>
+            </label>
+            <ul class="footer-directory-column-section-list">
+              <li><a href="#">Quản Lý ID Apple</a></li>
+              <li><a href="#">Tài Khoản Apple Store</a></li>
+              <li><a href="#">iCloud.com</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-directory-column">
+            <label
+              class="footer-directory-column-section-title"
+              for="footer-directory-column-section-4"
+            >
+              <h3>Giá Trị Của Apple</h3>
+            </label>
+            <ul class="footer-directory-column-section-list">
+              <li><a href="#">Trợ Năng</a></li>
+              <li><a href="#">Môi Trường</a></li>
+              <li><a href="#">Quyền Riêng Tư</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="footer-shop">
+          <div class="footer-shop-text">
+            Xem thêm cách để mua hàng: <a href="#">Tìm Cửa Hàng Apple</a> hoặc
+            <a href="#">nhà bán lẻ</a> gần bạn.
+            <span>Hoặc gọi 1800-1192.</span>
+          </div>
+        </section>
+
+        <section class="footer-legal">
+          <div class="footer-legal-copyright">
+            Bản quyền © 2024 Apple Inc. Bảo lưu mọi quyền.
+          </div>
+          <div class="footer-legal-links">
+            <a href="#">Chính Sách Quyền Riêng Tư</a>
+            <a href="#">Điều Khoản Sử Dụng</a>
+            <a href="#">Bán Hàng và Hoàn Tiền</a>
+            <a href="#">Pháp Lý</a>
+            <a href="#">Sơ Đồ Trang Web</a>
+          </div>
+          <div class="footer-legal-locale">Việt Nam</div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

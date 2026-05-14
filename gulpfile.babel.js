@@ -6,7 +6,7 @@ import path from "path";
 
 const sass = gulpSass(dartSass);
 
-// 1. Debug: Liệt kê toàn bộ file trong thư mục src
+// Debug: liệt kê toàn bộ file trong src
 export const debugSrc = (cb) => {
   console.log("\n=== DEBUG: Checking src directory ===");
   if (!fs.existsSync("src")) {
@@ -32,7 +32,7 @@ export const debugSrc = (cb) => {
   cb();
 };
 
-// 2. Đảm bảo thư mục dist tồn tại (tạo ngay từ đầu)
+// Đảm bảo thư mục dist tồn tại
 export const ensureDist = (cb) => {
   if (!fs.existsSync("dist")) {
     fs.mkdirSync("dist", { recursive: true });
@@ -41,14 +41,14 @@ export const ensureDist = (cb) => {
   cb();
 };
 
-// 3. Biên dịch Sass (có log chi tiết)
+// Biên dịch SCSS
 export const buildStyle = () => {
   console.log("🔍 Looking for SCSS files in: src/sass/**/*.scss");
   return gulp
     .src("src/sass/**/*.scss", { allowEmpty: true })
     .pipe(
       sass().on("error", (err) => {
-        console.error("❌ Sass compilation error:", err.message);
+        console.error("❌ Sass error:", err.message);
         process.exit(1);
       }),
     )
@@ -57,7 +57,7 @@ export const buildStyle = () => {
     .on("end", () => console.log("✅ buildStyle finished"));
 };
 
-// 4. Copy tất cả file HTML (src/**/*.html)
+// Copy HTML
 export const copyHtml = () => {
   console.log("🔍 Looking for HTML files in: src/**/*.html");
   return gulp
@@ -67,7 +67,7 @@ export const copyHtml = () => {
     .on("end", () => console.log("✅ copyHtml finished"));
 };
 
-// 5. Copy assets (fonts, img, js) nếu có
+// Copy assets (fonts, img, js)
 export const copyAssets = () => {
   const patterns = ["src/fonts/**/*", "src/img/**/*", "src/js/**/*"];
   console.log("🔍 Looking for assets:", patterns);
@@ -78,10 +78,10 @@ export const copyAssets = () => {
     .on("end", () => console.log("✅ copyAssets finished"));
 };
 
-// 6. Kiểm tra kết quả cuối cùng trong dist
+// Kiểm tra nội dung dist sau build
 export const checkDist = (cb) => {
   if (!fs.existsSync("dist")) {
-    console.error("❌ ERROR: dist directory still does NOT exist after build!");
+    console.error("❌ ERROR: dist directory does NOT exist after build!");
     return cb();
   }
   const walkSync = (dir, filelist = []) => {
@@ -108,8 +108,8 @@ export const checkDist = (cb) => {
   cb();
 };
 
-// Build sequence (chạy tuần tự)
-const buildTask = gulp.series(
+// Task build chính (chỉ một lần khai báo)
+export const build = gulp.series(
   debugSrc,
   ensureDist,
   buildStyle,
@@ -118,16 +118,5 @@ const buildTask = gulp.series(
   checkDist,
 );
 
-export { buildTask as build };
-export default buildTask;
-export const copyToPublic = () => {
-  return gulp.src("dist/**/*").pipe(gulp.dest("public"));
-};
-const buildTask = gulp.series(
-  debugSrc,
-  ensureDist,
-  buildStyle,
-  copyHtml,
-  copyAssets,
-  copyToPublic,
-);
+// Task mặc định (cho dev)
+export default build;
