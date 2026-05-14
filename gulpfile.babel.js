@@ -35,10 +35,12 @@ export const watch = () => {
 };
 
 // 5. TASK BUILD CHÍNH (Đảm bảo chạy cả build CSS và copy assets)
-export const build = gulp.series(
-  buildStyle,
-  gulp.parallel(copyHtml, copyAssets),
-);
+// Tạo một task chuyên dành cho việc Build trên Vercel (Bỏ watch ra)
+const buildTask = gulp.series(buildStyle, copyHtml, copyAssets);
 
-// 6. Task default
-export default gulp.series(build, watch);
+// Tạo task mặc định (dùng cho máy tính ở nhà, có watch)
+const defaultTask = gulp.series(buildTask, watch);
+
+// Export chúng ra
+export { buildTask as build };
+export default defaultTask;
