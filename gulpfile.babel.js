@@ -120,3 +120,14 @@ const buildTask = gulp.series(
 
 export { buildTask as build };
 export default buildTask;
+export const copyToPublic = () => {
+  return gulp.src("dist/**/*").pipe(gulp.dest("public"));
+};
+const buildTask = gulp.series(
+  debugSrc,
+  ensureDist,
+  buildStyle,
+  copyHtml,
+  copyAssets,
+  copyToPublic,
+);

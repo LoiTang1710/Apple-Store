@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build && ls -la dist && test -d dist && echo 'dist exists'"
   },
   "keywords": [],
   "author": "",
