@@ -1,46 +1,66 @@
 import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import dartSass from "sass";
+import fs from "fs";
 
 const sass = gulpSass(dartSass);
 
-// 1. Task biên dịch Sass -> CSS vào dist/css
+// Helper: log file được copy
+function logFiles(path, label) {
+  console.log(`✅ ${label}: ${path}`);
+}
+
+// 0. Đảm bảo thư mục dist tồn tại (tạo rỗng)
+export const ensureDist = (cb) => {
+  if (!fs.existsSync("dist")) {
+    fs.mkdirSync("dist", { recursive: true });
+    console.log("📁 Created dist directory");
+  }
+  cb();
+};
+
+// 1. Biên dịch Sass -> dist/css
 export const buildStyle = () => {
   return gulp
-    .src("src/sass/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("dist/css"));
+    .src("src/sass/**/*.scss", { allowEmpty: true })
+    .pipe(
+      sass().on("error", (err) => {
+        console.error("❌ Sass error:", err.message);
+        process.exit(1); // Dừng build nếu Sass lỗi
+      }),
+    )
+    .pipe(gulp.dest("dist/css"))
+    .on("end", () => console.log("🎨 Compiled CSS to dist/css"));
 };
 
-// 2. Task copy file HTML từ src vào dist
+// 2. Copy HTML (tất cả .html trong src và các thư mục con)
 export const copyHtml = () => {
   return gulp
-    .src("src/*.html") // Tìm file html trong thư mục src
-    .pipe(gulp.dest("dist")); // Đẩy vào thư mục dist
+    .src("src/**/*.html", { allowEmpty: true })
+    .pipe(gulp.dest("dist"))
+    .on("data", (file) => logFiles(file.path, "📄 Copied HTML"));
 };
 
-// 3. TASK COPY ẢNH VÀ CÁC THƯ MỤC KHÁC (img, js, fonts) VÀO DIST
-// Chìa khóa nằm ở { base: "src" } - nó giúp giữ nguyên cấu trúc thư mục
+// 3. Copy assets (fonts, img, js) – bỏ qua nếu thư mục không tồn tại
 export const copyAssets = () => {
+  const patterns = ["src/fonts/**/*", "src/img/**/*", "src/js/**/*"];
   return gulp
-    .src(["src/fonts/**/*", "src/img/**/*", "src/js/**/*"], { base: "src" })
-    .pipe(gulp.dest("dist")); // Đẩy tất cả vào dist, ví dụ src/img/iPhone/ -> dist/img/iPhone/
+    .src(patterns, { base: "src", allowEmpty: true })
+    .pipe(gulp.dest("dist"))
+    .on("data", (file) => logFiles(file.path, "🖼️ Copied asset"));
 };
 
-// 4. Task Watch (dùng khi code ở máy)
+// 4. Task build chính (chạy tuần tự)
+const buildTask = gulp.series(ensureDist, buildStyle, copyHtml, copyAssets);
+
+// 5. Watch (cho môi trường phát triển cục bộ)
 export const watch = () => {
   gulp.watch("src/sass/**/*.scss", buildStyle);
-  gulp.watch("src/*.html", copyHtml);
-  gulp.watch(["src/fonts/**/*", "src/img/**/*", "src/js/**/*"], copyAssets); // Watch cả thay đổi ảnh/js
+  gulp.watch("src/**/*.html", copyHtml);
+  gulp.watch(["src/fonts/**/*", "src/img/**/*", "src/js/**/*"], copyAssets);
 };
 
-// 5. TASK BUILD CHÍNH (Đảm bảo chạy cả build CSS và copy assets)
-// Tạo một task chuyên dành cho việc Build trên Vercel (Bỏ watch ra)
-const buildTask = gulp.series(buildStyle, copyHtml, copyAssets);
-
-// Tạo task mặc định (dùng cho máy tính ở nhà, có watch)
 const defaultTask = gulp.series(buildTask, watch);
 
-// Export chúng ra
 export { buildTask as build };
 export default defaultTask;
