@@ -1,0 +1,21 @@
+.grid-lab {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  .lab-card {
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    .lab-title {
+      font-size: 2em;
+      margin: 0;
+    }
+    .lab-list-links {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      text-align: center;
+    }
+  }
+}
