@@ -75,7 +75,13 @@ export const copyHtml = () => {
 
 // Copy assets (fonts, img, js) giữ nguyên cấu trúc thư mục
 export const copyAssets = () => {
-  const patterns = ["src/fonts/**/*", "src/img/**/*", "src/js/**/*"];
+  const patterns = [
+    "src/fonts/**/*",
+    "src/img/**/*",
+    "src/js/**/*",
+    "src/ThucHanh/**/*",
+    "!src/ThucHanh/**/*.html"
+  ];
   return gulp
     .src(patterns, { base: "src", allowEmpty: true })
     .pipe(gulp.dest("dist"))
@@ -114,7 +120,15 @@ export const watchFiles = () => {
   console.log("\n👀 Watching for changes in src/...");
   watch("src/sass/**/*.scss", buildStyle);
   watch("src/**/*.html", copyHtml);
-  watch(["src/img/**/*", "src/js/**/*", "src/fonts/**/*"], copyAssets);
+  watch(
+    [
+      "src/img/**/*",
+      "src/js/**/*",
+      "src/fonts/**/*",
+      "src/ThucHanh/**/*"
+    ],
+    copyAssets
+  );
 };
 
 // --- KHAI BÁO CÁC LỆNH CHÍNH ---
